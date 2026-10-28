@@ -1,0 +1,32 @@
+body {
+  background-image: url("./images/bloco-apaixonados.jpg");
+
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.galeria-imagens {
+  display: flex; /* Deixa os itens lado a lado */
+  gap: 20px; /* Cria um espaço de 20px entre as imagens */
+  /*flex-wrap: wrap; /* Se a tela for pequena, a imagem passa para baixo automaticamente */
+  margin-top: 20px;
+}
+
+.galeria-imagens img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* Evita que a imagem fique distorcida */
+  border-radius: 2px; /*Deixa os cantos arredondados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+border: 3px solid transparent; /* Cria uma borda invisível de 4 pixels */
+  transition: border-color 0.3s ease;
+  transition: transform 0.2s ease; /* Efeito suave ao passar o mouse */
+}
+
+.galeria-imagens img:hover {
+  transform: scale(1.03);
+  border-color: red;
+}
