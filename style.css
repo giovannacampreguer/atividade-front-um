@@ -1,6 +1,4 @@
 body {
-  background-image: url("./images/bloco-apaixonados.jpg");
-
   background-color: #121212;
   color: #ffffff;
   font-family: Arial, sans-serif;
@@ -24,6 +22,11 @@ header h1 {
   margin: 0;
 }
 
+header a {
+  color: white;
+  text-decoration: none;
+}
+
 header ul {
   display: flex;
   align-items: center;
@@ -36,6 +39,27 @@ header ul {
 header li {
   border-right: 1px solid white;
   padding: 0 12px;
+}
+
+#inicio {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#inicio {
+  position: relative;
+  isolation: isolate;
+}
+
+#inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--imagem-fundo) center / cover;
+  filter: blur(5px);
+  opacity: 0.8;
+  z-index: -1;
 }
 
 .botao-busca {
@@ -57,7 +81,6 @@ header li {
 }
 
 .musica-principal {
-  /*text-align: center;*/
   padding: 40px 20px;
   margin-bottom: 30px;
 }
@@ -74,7 +97,6 @@ header li {
 
 .controles-musica {
   display: flex;
-  /*justify-content: center;*/
   align-items: center;
   gap: 20px;
 }
@@ -85,6 +107,10 @@ header li {
   color: white;
   font-size: 22px;
   cursor: pointer;
+}
+
+.controles-musica button.ativo {
+  color: red;
 }
 
 .galeria-imagens {
@@ -123,3 +149,56 @@ header li {
 .musica.selecionada img {
   border-color: red;
 }
+
+
+
+#menu-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  header {
+    justify-content: space-between;
+  }
+
+  header h1 {
+    position: static;
+    margin: 0 auto;
+  }
+
+  #menu-mobile {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #222;
+    width: 180px;
+    z-index: 10;
+  }
+
+  #menu.aberto {
+    display: block;
+  }
+
+  #menu ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header li {
+    border-right: none;
+    border-bottom: 1px solid white;
+    padding: 12px;
+  }
+}
+

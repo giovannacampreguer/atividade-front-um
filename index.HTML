@@ -13,16 +13,23 @@
   <body>
     <header>
       <h1>MAD Music</h1>
-      <nav>
+
+      <button id="menu-mobile" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav id="menu">
         <ul>
           <li><a href="#inicio">Início</a></li>
           <li><a href="#playlist">Playlist</a></li>
           <li><a href="#login">Login</a></li>
+          <li>
+            <button class="botao-busca" aria-label="Buscar">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </li>
         </ul>
       </nav>
-      <button class="botao-busca" aria-label="Buscar">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
     </header>
     <main>
       <section id="inicio">
