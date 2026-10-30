@@ -26,43 +26,94 @@
     </header>
     <main>
       <section id="inicio">
-        <h2>Bloco dos Apaixonados</h2>
+        <div class="musica-principal">
+          <h2 id="titulo-musica">Bloco dos Apaixonados</h2>
+
+          <p id="informacoes-musica">Sotam - Bloco dos Apaixonados - 2026</p>
+
+          <div class="controles-musica">
+            <button aria-label="Play">
+              <i class="fa-solid fa-play"></i>
+              Play
+            </button>
+
+            <button id="like" aria-label="Like">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </button>
+
+            <button id="dislike" aria-label="Dislike">
+              <i class="fa-solid fa-thumbs-down"></i>
+            </button>
+          </div>
+        </div>
         <div class="galeria-imagens">
-          <div class="musica">
-            <p>Sotam - Bloco dos Apaixonados - 2026</p>
+          <div
+            class="musica selecionada"
+            data-titulo="Bloco dos Apaixonados"
+            data-artista="Sotam"
+            data-album="Bloco dos Apaixonados"
+            data-ano="2026"
+            data-capa="./images/Bloco dos apaixonados.jpg"
+          >
             <img
               src="./images/Bloco dos apaixonados.jpg"
-              alt="Bloco dos Apaixonados-LEGO"
+              alt="Bloco dos Apaixonados - LEGO"
             />
           </div>
-          <div class="musica">
-            <p>Baco Exu Do Blues - Lágrimas - 2022</p>
+
+          <div
+            class="musica"
+            data-titulo="Lágrimas"
+            data-artista="Baco Exu do Blues"
+            data-album="Lágrimas"
+            data-ano="2022"
+            data-capa="./images/Baco Lagrimas.jpg"
+          >
             <img
               src="./images/Baco Lagrimas.jpg"
-              alt=" Stream Lágrimas (feat. Gal Costa) by Baco Exu do Blues"
+              alt="Lágrimas - Baco Exu do Blues"
             />
           </div>
-          <div class="musica">
-            <p>2ZDinizz - Beatriz - 2025</p>
+
+          <div
+            class="musica"
+            data-titulo="Beatriz"
+            data-artista="2ZDinizz"
+            data-album="Beatriz"
+            data-ano="2025"
+            data-capa="./images/Beatriz.jpg"
+          >
             <img src="./images/Beatriz.jpg" alt="Beatriz - 2ZDinizz" />
           </div>
-          <div class="musica">
-            <p>Delacruz - Pensando Direito - 2026</p>
+
+          <div
+            class="musica"
+            data-titulo="Pensando Direito"
+            data-artista="Delacruz"
+            data-album="Pensando Direito"
+            data-ano="2026"
+            data-capa="./images/PensandoDireito.jpg"
+          >
             <img
               src="./images/PensandoDireito.jpg"
-              alt="pensando direito - Delacruz"
+              alt="Pensando Direito - Delacruz"
             />
           </div>
-          <div class="musica">
-            <p>Delacruz - Sunshine - 2019</p>
-            <img
-              src="./images/Sunshine.jpg"
-              alt="Sunshine – música de Delacruz"
-            />
+
+          <div
+            class="musica"
+            data-titulo="Sunshine"
+            data-artista="Delacruz"
+            data-album="Sunshine"
+            data-ano="2019"
+            data-capa="./images/Sunshine.jpg"
+          >
+            <img src="./images/Sunshine.jpg" alt="Sunshine - Delacruz" />
           </div>
         </div>
       </section>
     </main>
     <footer></footer>
+    <script src="script.js"></script>
   </body>
 </html>

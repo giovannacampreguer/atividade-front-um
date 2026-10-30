@@ -47,28 +47,68 @@ header li {
   font-size: 20px;
 }
 
+#inicio {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.musica-principal {
+  /*text-align: center;*/
+  padding: 40px 20px;
+  margin-bottom: 30px;
+}
+
+.musica-principal h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.musica-principal p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.controles-musica {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  gap: 20px;
+}
+
+.controles-musica button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 .galeria-imagens {
-  display: flex; /* deixa os itens lado a lado */
-  gap: 30px; /* cria um espaço entre as imagens */
-  flex-wrap: wrap; /* acabou a tela, a imagem passa para baixo */
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
 .galeria-imagens img {
   width: 250px;
   height: 250px;
-  object-fit: cover; /* sem imagem distorcida */
-  border-radius: 2px; /*deixa os cantos arredondados */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add uma sombra */
-  border: 3px solid transparent; /* cria uma borda invisível */
-  transition: border-color 0.3s ease;
-  transition: transform 0.2s ease; /* efeito qdo passa o mouse */
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 3px solid transparent;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+  
 }
 
 .galeria-imagens img:hover {
   transform: scale(1.03);
-  border-color: red;
 }
+
 .musica {
   display: flex;
   flex-direction: column;
@@ -78,4 +118,8 @@ header li {
 .musica p {
   height: 40px;
   margin: 0 0 10px 0;
+}
+
+.musica.selecionada img {
+  border-color: red;
 }
